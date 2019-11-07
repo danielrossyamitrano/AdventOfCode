@@ -8,7 +8,7 @@ with open(getcwd() + '/input.txt', 'r') as file:
 frequencies = []
 value = 0
 running = 1
-with open(getcwd() + '/ex2_result.txt', "tw") as file:
+with open(getcwd() + '/result.txt', "tw") as file:
     instance = -1
     while running:
         for mod in puzzle_input:

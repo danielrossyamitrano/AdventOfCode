@@ -29,5 +29,5 @@ for i, char in enumerate(a):
     if char == b[i]:
         common_letters += char
 
-with open(getcwd() + '/ex2_result.txt', "tw") as file:
+with open(getcwd() + '/result.txt', "tw") as file:
     file.write(common_letters)
