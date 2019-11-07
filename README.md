@@ -1,4 +1,4 @@
-# AdventOfCode2018
-Repo para comparar algortimos de resolución para los ejercicios de Advent of Code 2018.
+# AdventOfCode
+Repo para comparar algortimos de resolución para los ejercicios de Advent of Code.
 
-https://adventofcode.com/2018/about
+https://adventofcode.com/
