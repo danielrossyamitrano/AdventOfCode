@@ -14,3 +14,6 @@ for j, rect in enumerate(rects, start=1):
     collide_list = [i for i in rects if i is not rect]
     if not rect.collidelist(collide_list):
         print(j)
+
+# puede ser que el problema esté en que se está comparando un rect contra todos los demás, sueltos.
+# el problema pregunta cuál es el rect que no se superpone al final de todos los recortes.
