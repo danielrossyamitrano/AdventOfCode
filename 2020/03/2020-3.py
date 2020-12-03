@@ -13,10 +13,11 @@ for i, slope in enumerate(slopes):
     trees_ex2.append(0)
     while True:
         x += slope[0]
-        if x >= 31:
-            x = x - 31
+        # less hardcoded as suggested by Reddit user u/Chrinkus
+        if x >= len(rows[y]):
+            x = x - len(rows[y])
         y += slope[1]
-        if y >= 323:
+        if y >= len(rows):
             break
 
         if rows[y][x] == '#':  # suggested by Reddit user u/MiataCory
