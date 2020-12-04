@@ -1,14 +1,17 @@
+from os import getcwd, path
+
 # Preprocessing: read file and group individual passwords in one list.
 chunks = [[]]
 i = 0
-with open('input.txt', 'rt') as file:
+with open(path.join(getcwd(), '04', 'input.txt'), 'rt') as file:
     for line in file.readlines():
         if not line.isspace():
             chunks[i].append(line.rstrip('\n'))
         else:
             chunks.append([])
             i += 1
-# Preprocessing convert the lists into a master dictionary
+
+# Preprocessing: convert the lists into a master dictionary
 master = []
 for i, item in enumerate([' '.join(chunk).split(' ') for chunk in chunks]):
     master.append({})
@@ -24,7 +27,7 @@ for item in master:
     if len(item) == len(keys):
         valid_ex1 += 1
         initially_valid = True
-    elif len(item) == len(keys)-1:
+    elif len(item) == len(keys) - 1:
         if keys[-1] not in item:
             valid_ex1 += 1
             initially_valid = True
@@ -51,9 +54,8 @@ for item in master:
         if item['hcl'].startswith('#') and len(item['hcl']) == 7:
             maybe_valid.append(True)
 
-        if all(maybe_valid) and len(maybe_valid) == len(keys)-1:
+        if all(maybe_valid) and len(maybe_valid) == len(keys) - 1:
             valid_ex2 += 1
-
 
 print(valid_ex1)
 print(valid_ex2)

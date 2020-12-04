@@ -1,4 +1,6 @@
-file = open('input.txt').readlines()
+from os import getcwd, path
+
+file = open(path.join(getcwd(), '03', 'input.txt')).readlines()
 
 rows = []
 for line in file:
@@ -24,7 +26,6 @@ for i, slope in enumerate(slopes):
             if i == 1:
                 ex1 += 1
             trees_ex2[i] += 1
-
 
 print(ex1)
 
