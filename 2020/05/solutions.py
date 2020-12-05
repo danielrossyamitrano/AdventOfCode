@@ -51,5 +51,6 @@ for silla in asientos:
     y = silla // 128
     if silla not in seats and y not in (0, 7):
         result_ex2 = silla
+        break
 
 print('result ex2:', result_ex2)
